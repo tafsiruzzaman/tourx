@@ -4,3 +4,7 @@
     font-size: 17px;
     font-weight: bold;
 }
+
+.btn-colour button {
+    background-color: #ff7f47;
+}

@@ -44,13 +44,13 @@ const Header = () => {
                 }
                 {
                     user.email ? 
-                    <div>
+                    <div className="btn-colour">
                         <Button onClick={logOut} variant="warning rounded-0 text-white px-3">
                             <i className="fas fa-sign-in-alt"></i> Sign Out
                          </Button>
                     </div>
                     :
-                    <NavLink to="/signin">
+                    <NavLink to="/signin" className="btn-colour">
                         <Button variant="warning rounded-0 text-white px-3">
                             <i className="fas fa-sign-in-alt"></i> Sign In
                         </Button>

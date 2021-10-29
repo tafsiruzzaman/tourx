@@ -4,6 +4,7 @@ import Header from './pages/Header/Header';
 import Home from './pages/Home/Home/Home';
 import SignIn from './pages/Registration/SignIn/SignIn';
 import AuthProvider from './contexts/AuthProvider';
+import Footer from './pages/Footer/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <SignIn></SignIn>
             </Route>
           </Switch>
+          <Footer></Footer>
         </BrowserRouter>
       </AuthProvider>
     </div>
