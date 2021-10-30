@@ -6,7 +6,7 @@ import './Packages.css';
 const Packages = () => {
     const [packages, setPackages] = useState([]);
     useEffect(()=> {
-        fetch('./packages.json')
+        fetch('http://localhost:5000/packages')
         .then(res => res.json())
         .then(data => setPackages(data))
     }, [])
@@ -19,7 +19,7 @@ const Packages = () => {
             <div className="my-5">
                 <Row xs={1} md={2} lg={3} className="g-4">
                     {
-                        packages.map(singlePackage => <Package singlePackage={singlePackage}></Package>)
+                        packages.map(singlePackage => <Package key={singlePackage._id} singlePackage={singlePackage}></Package>)
                     }
                 </Row>
             </div>

@@ -5,6 +5,10 @@ import Home from './pages/Home/Home/Home';
 import SignIn from './pages/Registration/SignIn/SignIn';
 import AuthProvider from './contexts/AuthProvider';
 import Footer from './pages/Footer/Footer';
+import RegistrationRoute from './PrivateRoutes/RegistrationRoute/RegistrationRoute';
+import GeneralRoute from './PrivateRoutes/GeneralRoute/GeneralRoute';
+import Booking from './pages/Home/Booking/Booking';
+import UserBookings from './pages/Home/UserBookings/UserBookings/UserBookings';
 
 function App() {
   return (
@@ -19,9 +23,15 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/signin">
+            <RegistrationRoute path="/signin">
               <SignIn></SignIn>
-            </Route>
+            </RegistrationRoute>
+            <GeneralRoute path="/booking/:id">
+              <Booking></Booking>
+            </GeneralRoute>
+            <GeneralRoute path="/myBookings">
+              <UserBookings></UserBookings>
+            </GeneralRoute>
           </Switch>
           <Footer></Footer>
         </BrowserRouter>

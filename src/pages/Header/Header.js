@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import logo from '../../images/download.png';
@@ -34,18 +34,19 @@ const Header = () => {
             </Nav>
             <Nav className="text-center">
                 {
-                    user.email && <NavLink activeStyle={activeStyle} className="me-3 mt-lg-2" to="/home">My Bookings</NavLink>
+                    user.email && <NavLink activeStyle={activeStyle} className="me-3 mt-lg-2" to="/myBookings">My Bookings</NavLink>
                 }
                 {
-                    user.email && <NavLink activeStyle={activeStyle} className="me-3 mt-lg-2" to="/home">Manage All Bookings</NavLink>
-                }
-                {
-                    user.email && <NavLink activeStyle={activeStyle} className="me-3 mt-lg-2" to="/home">Add New</NavLink>
+                    user.email &&
+                    <NavDropdown title="Admin" className="mx-auto mb-1 mb-lg-0">
+                        <NavDropdown.Item><NavLink to="/allBookings">All Bookings</NavLink></NavDropdown.Item>
+                        <NavDropdown.Item><NavLink to="/addNew">Add a new package</NavLink></NavDropdown.Item>
+                    </NavDropdown>
                 }
                 {
                     user.email ? 
                     <div className="btn-colour">
-                        <Button onClick={logOut} variant="warning rounded-0 text-white px-3">
+                        <Button onClick={logOut} variant="warning rounded-0 text-white ms-3 px-3">
                             <i className="fas fa-sign-in-alt"></i> Sign Out
                          </Button>
                     </div>

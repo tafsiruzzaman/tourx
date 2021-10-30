@@ -1,8 +1,13 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 
 const Package = (props) => {
-    const {name, img, price, days, nights, totalRatting} = props.singlePackage;
+    const {name, img, price, days, nights, totalRatting, _id} = props.singlePackage;
+    const history = useHistory();
+    const handleClick = ()=> {
+        history.push(`/booking/${_id}`);
+    };
     return (
         <Col>
             <Card>
@@ -17,7 +22,7 @@ const Package = (props) => {
                         <h6 className="orange-text py-2"><i className="fas fa-map-marker-alt"></i> {name}</h6>
                         <p><small className="header-text-colour"><i className="fas fa-star orange-text"></i>  {totalRatting}Rating</small></p>
                     </div>
-                    <Button variant="warning rounded-0 text-white px-3"><i className="fas fa-plus-circle"></i> Book Now</Button>
+                    <Button onClick={handleClick} variant="warning rounded-0 text-white px-3"><i className="fas fa-plus-circle"></i> Book Now</Button>
                 </div>
                 </Card.Body>
             </Card>
