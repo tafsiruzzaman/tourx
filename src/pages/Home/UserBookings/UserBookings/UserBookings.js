@@ -12,8 +12,22 @@ const UserBookings = () => {
     }, []);
 
     const handleDelete = id => {
-        console.log("delete", id)
-    }
+        const proceed = window.confirm('Are you sure, you want to cancel this trip?');
+        if (proceed) {
+            const url = `http://localhost:5000/allBookings/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    const remainingUsers = usersBookings.filter(event => event._id !== id);
+                    setUserBookings(remainingUsers);
+                    alert('Trip cancel successfully');
+                }
+            });
+        };
+    };
 
     return (
         <div className="container my-3 my-md-5">

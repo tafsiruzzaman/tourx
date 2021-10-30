@@ -2,8 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 
 const SingleItem = (props) => {
-    console.log(props)
-    const {img, packageName, date, adult, child, price, status, id} = props.singleItem;
+    const {img, packageName, date, adult, child, price, status, _id} = props.singleItem;
     const {handleDelete} = props;
     return (
         <div className="col-lg-6">
@@ -22,7 +21,7 @@ const SingleItem = (props) => {
                         </div>
                         <div className="col-6 col-md-12">
                             <div className="d-flex align-item-center">
-                                <Button onClick={()=> handleDelete(id)} variant="warning rounded-0 text-white px-4 mt-2">Cencel</Button>
+                                <Button onClick={()=> handleDelete(_id)} variant="warning rounded-0 text-white px-4 mt-2">Cencel</Button>
                             </div>
                         </div>
                     </div>
