@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
-import { Button, Form} from 'react-bootstrap';
+import { Button, Form, Spinner} from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 const Booking = () => {
@@ -41,76 +41,90 @@ const Booking = () => {
     return (
         <div className="container my-5">
             <div className="row">
-                <div className="col-lg-7">
-                    <div>
-                        <img className="img-fluid" src={singlePack.img} alt="" />
-                        <div className="mt-4 d-flex align-item-center justify-content-between">
-                            <div className="text-start">
-                                <h2 className="header-text-colour">{singlePack.name}</h2>
-                                <h6 className="text-secondary pt-2"><i className="fas fa-map-marker-alt"></i> {singlePack.location}</h6>
-                            </div>
-                            <div className="text-start">
-                                <small className="d-block">Excellent</small>
-                                <small className="d-block">Ratting: <i className="orange-text fas fa-star"></i> {singlePack.avgRatting}</small>
-                                <small className="d-block">{singlePack.totalRatting} Review</small>
-                            </div>
-                        </div>
-                        <hr />
+                {
+                    singlePack.length === 0 ?
+                    <Button variant="warning" disabled>
+                    <Spinner
+                    as="span"
+                    animation="grow"
+                    size="sm"
+                    role="status"
+                    aria-hidden="true"
+                    />
+                        Loading...
+                    </Button>
+                    :
+                    <div className="col-lg-7">
                         <div>
-                            <div className="row">
-                                <div className="col-md-6">
-                                    <div className="row">
-                                        <div className="col-6">
-                                            <div className="mt-2 d-flex align-items-center">
-                                                <h3 className="orange-text mb-0"><i className="me-3 far fa-clock"></i></h3>
-                                                <div>
-                                                    <p className="mb-0 fw-bolder">Duration</p>
-                                                    <small className="mb-0 text-secondary">Daily Tour</small>
+                            <img className="img-fluid" src={singlePack.img} alt="" />
+                            <div className="mt-4 d-flex align-item-center justify-content-between">
+                                <div className="text-start">
+                                    <h2 className="header-text-colour">{singlePack.name}</h2>
+                                    <h6 className="text-secondary pt-2"><i className="fas fa-map-marker-alt"></i> {singlePack.location}</h6>
+                                </div>
+                                <div className="text-start">
+                                    <small className="d-block">Excellent</small>
+                                    <small className="d-block">Ratting: <i className="orange-text fas fa-star"></i> {singlePack.avgRatting}</small>
+                                    <small className="d-block">{singlePack.totalRatting} Review</small>
+                                </div>
+                            </div>
+                            <hr />
+                            <div>
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <div className="row">
+                                            <div className="col-6">
+                                                <div className="mt-2 d-flex align-items-center">
+                                                    <h3 className="orange-text mb-0"><i className="me-3 far fa-clock"></i></h3>
+                                                    <div>
+                                                        <p className="mb-0 fw-bolder">Duration</p>
+                                                        <small className="mb-0 text-secondary">Daily Tour</small>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div className="col-6">
-                                            <div className="mt-2 d-flex align-items-center">
-                                                <h3 className="orange-text mb-0"><i className="me-3 fas fa-walking"></i></h3>
-                                                <div>
-                                                    <p className="mb-0 fw-bolder">Tour Type</p>
-                                                    <small className="mb-0 text-secondary">{singlePack.days} days</small>
+                                            <div className="col-6">
+                                                <div className="mt-2 d-flex align-items-center">
+                                                    <h3 className="orange-text mb-0"><i className="me-3 fas fa-walking"></i></h3>
+                                                    <div>
+                                                        <p className="mb-0 fw-bolder">Tour Type</p>
+                                                        <small className="mb-0 text-secondary">{singlePack.days} days</small>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="row">
-                                        <div className="col-6">
-                                            <div className="mt-2 d-flex align-items-center">
-                                                <h3 className="orange-text mb-0"><i className="me-3 fas fa-users"></i></h3>
-                                                <div>
-                                                    <p className="mb-0 fw-bolder">Group Size</p>
-                                                    <small className="mb-0 text-secondary">30 People</small>
+                                    <div className="col-md-6">
+                                        <div className="row">
+                                            <div className="col-6">
+                                                <div className="mt-2 d-flex align-items-center">
+                                                    <h3 className="orange-text mb-0"><i className="me-3 fas fa-users"></i></h3>
+                                                    <div>
+                                                        <p className="mb-0 fw-bolder">Group Size</p>
+                                                        <small className="mb-0 text-secondary">30 People</small>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div className="col-6">
-                                            <div className="mt-2 d-flex align-items-center">
-                                                <h3 className="orange-text mb-0"><i className="me-3 fas fa-language"></i></h3>
-                                                <div>
-                                                    <p className="mb-0 fw-bolder">Languages</p>
-                                                    <small className="mb-0 text-secondary">Any Language</small>
+                                            <div className="col-6">
+                                                <div className="mt-2 d-flex align-items-center">
+                                                    <h3 className="orange-text mb-0"><i className="me-3 fas fa-language"></i></h3>
+                                                    <div>
+                                                        <p className="mb-0 fw-bolder">Languages</p>
+                                                        <small className="mb-0 text-secondary">Any Language</small>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <hr />
-                        <div className="my-4">
-                            <h1 className="header-text-colour text-start">Overview</h1>
-                            <p className="text-secondary" style={{textAlign: "justify"}}>{singlePack.description}</p>
+                            <hr />
+                            <div className="my-4">
+                                <h1 className="header-text-colour text-start">Overview</h1>
+                                <p className="text-secondary" style={{textAlign: "justify"}}>{singlePack.description}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
                 <div className="col-lg-5">
                     <div className="px-4 py-4 shadow">
                         <Form onSubmit={handleSubmit(onSubmit)}>
