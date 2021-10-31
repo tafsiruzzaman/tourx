@@ -9,7 +9,7 @@ It is a single page application made with ReactJS, React-bootstrap etc...
 ## Technologies
 
 [![React Badge](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![React-Bootstrap Badge](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react-bootstrap.github.io/)
+[![React-Bootstrap Badge](https://img.shields.io/badge/React-Bootstrap-lightgrey)](https://react-bootstrap.github.io/)
 [![Firebase Badge](https://img.shields.io/badge/Firebase-FFCB2B?style=for-the-badge&logo=firebase&logoColor=white)](https://firebase.google.com/)
 [![React Router Badge](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)](https://reactrouter.com/)
 [![Git Badge](https://img.shields.io/badge/git-f34f29?style=for-the-badge&logo=git&logoColor=white)](https://github.com/)

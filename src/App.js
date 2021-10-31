@@ -13,6 +13,7 @@ import AllBookings from './pages/AllBookings/AllBookings/AllBookings';
 import AddNew from './pages/AddNew/AddNew';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -48,6 +49,9 @@ function App() {
             <GeneralRoute path="/addNew">
               <AddNew></AddNew>
             </GeneralRoute>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
           <Footer></Footer>
         </BrowserRouter>
