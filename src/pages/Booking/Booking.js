@@ -33,7 +33,7 @@ const Booking = () => {
         .then(data => {
             if (data.insertedId) {
                 reset();
-                alert('Your Booking is Successfully')
+                alert('Your Booking is Successful')
                 history.push('/myBookings')
             }
         })

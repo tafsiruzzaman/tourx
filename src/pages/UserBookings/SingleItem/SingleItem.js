@@ -16,7 +16,7 @@ const SingleItem = (props) => {
                         <div className="col-6 col-md-12">
                             <small className=" d-block fw-bold">Date: {date}</small>
                             <small className=" d-block fw-bold">Adult: {adult}, Child: {child}</small>
-                            <small className=" d-block fw-bold">Pirce/person: {price}</small>
+                            <small className=" d-block fw-bold">Pirce/person: {price}$</small>
                             <small className=" d-block fw-bold orange-text">Status: {status}</small>
                         </div>
                         <div className="col-6 col-md-12">

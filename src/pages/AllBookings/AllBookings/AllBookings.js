@@ -24,7 +24,7 @@ const AllBookings = () => {
                 if (data.deletedCount > 0) {
                     const remainingBookings = all_bookings.filter(event => event._id !== id);
                     setAll_bookings(remainingBookings);
-                    alert('Trip cancel successfully');
+                    alert('Record deleted successfully');
                 }
             });
         };
