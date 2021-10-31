@@ -11,6 +11,8 @@ import UserBookings from './pages/UserBookings/UserBookings/UserBookings';
 import Booking from './pages/Booking/Booking';
 import AllBookings from './pages/AllBookings/AllBookings/AllBookings';
 import AddNew from './pages/AddNew/AddNew';
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
 
 function App() {
   return (
@@ -24,6 +26,12 @@ function App() {
             </Route>
             <Route path="/home">
               <Home></Home>
+            </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/contact">
+              <Contact></Contact>
             </Route>
             <RegistrationRoute path="/signin">
               <SignIn></SignIn>
