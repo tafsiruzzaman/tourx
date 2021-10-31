@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyAM36E600nFboSa_Yw1-nO6VUNXyWOoaBs",
-  authDomain: "tourx-tj.firebaseapp.com",
-  projectId: "tourx-tj",
-  storageBucket: "tourx-tj.appspot.com",
-  messagingSenderId: "705485970181",
-  appId: "1:705485970181:web:86ba7e4c441fefec0ef56c"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
 export default firebaseConfig;
