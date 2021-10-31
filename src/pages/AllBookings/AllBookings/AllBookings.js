@@ -31,11 +31,11 @@ const AllBookings = () => {
     }
     return (
         <div className="container my-5">
-            <h3 className="text-center mb-3 fw-bolder">All Bookings</h3>
+            <h3 className="text-center mb-3 header-text-colour">All Bookings</h3>
             <div className="table-responsive">
             <table className="table table-striped table-bordered">
                 <thead>
-                <tr className="bg-dark text-white">
+                <tr className="bg-light text-drak">
                     <th scope="col">Id</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>

@@ -10,6 +10,7 @@ import GeneralRoute from './PrivateRoutes/GeneralRoute/GeneralRoute';
 import UserBookings from './pages/UserBookings/UserBookings/UserBookings';
 import Booking from './pages/Booking/Booking';
 import AllBookings from './pages/AllBookings/AllBookings/AllBookings';
+import AddNew from './pages/AddNew/AddNew';
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
             </GeneralRoute>
             <GeneralRoute path="/allBookings">
               <AllBookings></AllBookings>
+            </GeneralRoute>
+            <GeneralRoute path="/addNew">
+              <AddNew></AddNew>
             </GeneralRoute>
           </Switch>
           <Footer></Footer>
