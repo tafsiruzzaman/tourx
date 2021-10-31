@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import { Button, Form} from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router';
-import useAuth from '../../../hooks/useAuth';
-
+import useAuth from '../../hooks/useAuth';
 const Booking = () => {
     const {id} = useParams();
     const history = useHistory();
     const {user} = useAuth();
     const [singlePack, setSinglePack] = useState({});
-    const url = `http://localhost:5000/package/${id}`;
+    const url = `https://frightening-vault-95840.herokuapp.com/package/${id}`;
     useEffect(()=> {
         fetch(url)
         .then(res => res.json())
@@ -23,7 +22,7 @@ const Booking = () => {
         data.status = "Pending";
         data.id = singlePack._id;
         
-        fetch('http://localhost:5000/allBookings', {
+        fetch('https://frightening-vault-95840.herokuapp.com/allBookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -35,7 +34,7 @@ const Booking = () => {
             if (data.insertedId) {
                 reset();
                 alert('Your Booking is Successfully')
-                history.push('/')
+                history.push('/myBookings')
             }
         })
     };

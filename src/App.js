@@ -7,8 +7,9 @@ import AuthProvider from './contexts/AuthProvider';
 import Footer from './pages/Footer/Footer';
 import RegistrationRoute from './PrivateRoutes/RegistrationRoute/RegistrationRoute';
 import GeneralRoute from './PrivateRoutes/GeneralRoute/GeneralRoute';
-import Booking from './pages/Home/Booking/Booking';
-import UserBookings from './pages/Home/UserBookings/UserBookings/UserBookings';
+import UserBookings from './pages/UserBookings/UserBookings/UserBookings';
+import Booking from './pages/Booking/Booking';
+import AllBookings from './pages/AllBookings/AllBookings/AllBookings';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
             </GeneralRoute>
             <GeneralRoute path="/myBookings">
               <UserBookings></UserBookings>
+            </GeneralRoute>
+            <GeneralRoute path="/allBookings">
+              <AllBookings></AllBookings>
             </GeneralRoute>
           </Switch>
           <Footer></Footer>
