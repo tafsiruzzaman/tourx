@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import SingleBooking from '../SingleBooking/SingleBooking';
 
 
 const AllBookings = () => {
     const [all_bookings, setAll_bookings] = useState([])
-    useState(() => {
+    useEffect(() => {
         fetch('https://frightening-vault-95840.herokuapp.com/allBookings')
         .then(res => res.json())
         .then (data => {

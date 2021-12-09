@@ -13,7 +13,7 @@ const Contact = () => {
             <div className="row g-4">
                 <div className="col-md-6 text-start">
                     <h3 className="header-text-colour">Get In Touch</h3>
-                    <p className="text-secondary" style={{textAlign: "justify"}}>Suspendisse dolor risus, congue ac diam id, viverra facilisis dolor. Cras nec purus sagittis, varius tortor at, maximus erat. Sed at tellus id tellus lobortis dictum. Mauris dignissim, turpis vitae ullamcorper fermentum, sapien arcu aliquam arcu, in viverra quam est ac ex. Cras sed lectus eu.</p>
+                    <p className="text-secondary" style={{textAlign: "justify"}}>With a dedicated team of over 100 professionals across BD who specialize only in meetings, incentives, conferences and events, TourX’s customer focused strategies and national reach have consistently ensured our market leadership in the MICE segment of the outbound travel arena.</p>
                     <div className="d-flex">
                         <div>
                             <h1 className="header-text-colour me-4" style={{fontSize: "48px"}}><i className="far fa-clock"></i></h1>

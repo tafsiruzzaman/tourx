@@ -21,7 +21,7 @@ const SingleItem = (props) => {
                         </div>
                         <div className="col-6 col-md-12">
                             <div className="d-flex align-item-center">
-                                <Button onClick={()=> handleDelete(_id)} variant="warning rounded-0 text-white px-4 mt-2">Cencel</Button>
+                                <Button onClick={()=> handleDelete(_id)} variant="warning rounded-0 text-white px-4 mt-2">Cancel</Button>
                             </div>
                         </div>
                     </div>
